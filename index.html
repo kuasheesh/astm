@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JETA1 Density Variation Calculator</title>
+    <style>
+        /* Basic styling for usability */
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .location-group { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="number"] { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px; }
+        #results { margin-top: 30px; padding: 15px; border: 2px dashed #007bff; min-height: 50px; }
+        .result-pass { color: green; font-weight: bold; }
+        .result-fail { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>⛽ JETA1 Density Variation Check</h1>
+
+    <div class="location-group">
+        <h2>🛫 Dispatch Location</h2>
+        <label for="dispatchTemp">Temperature (°C):</label>
+        <input type="number" id="dispatchTemp" value="35.0" step="0.1" required>
+
+        <label for="dispatchDensity">Observed Density (kg/m³):</label>
+        <input type="number" id="dispatchDensity" value="795.0" step="0.1" required>
+    </div>
+
+    <div class="location-group">
+        <h2>🛬 Receiving Location</h2>
+        <label for="receivingTemp">Temperature (°C):</label>
+        <input type="number" id="receivingTemp" value="20.0" step="0.1" required>
+
+        <label for="receivingDensity">Observed Density (kg/m³):</label>
+        <input type="number" id="receivingDensity" value="805.0" step="0.1" required>
+    </div>
+
+    <button onclick="calculateDensityVariation()">Calculate Variation</button>
+
+    <div id="results">
+        <p>Results will appear here...</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
