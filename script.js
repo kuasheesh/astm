@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
 const ACCEPTABLE_VARIATION = 2.5; // kg/m³
 // *** PASTE YOUR GOOGLE SHEET PUBLISHED CSV URL HERE ***
-const ASTM_DATA_URL = 'astm_data.csv'; 
+const ASTM_DATA_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR8KDpPr0Sz61z3-qLYG2wjB86twniR6NFMm4J2Y_hN_purRZYnhJr4LYGhBAL1OmmKieET5yMNNvK2/pub?gid=0&single=true&output=csv'; 
 
 let astmTableData = null; // Will hold { headers, rowKeys, matrix }
 
